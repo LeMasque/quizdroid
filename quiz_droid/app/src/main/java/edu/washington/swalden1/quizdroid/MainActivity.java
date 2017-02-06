@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         // TODO: loop over all the buttons on this main view DONE
         RelativeLayout main = (RelativeLayout) findViewById(R.id.activity_main);
         for (int i = 0; i < main.getChildCount(); i++) {
-            main.getChildAt(i).setOnClickListener(new ButtonClick());;
+            main.getChildAt(i).setOnClickListener(new ButtonClick());
         }
     }
 
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             Button b = (Button) v;
             String topic = b.getText().toString().toLowerCase();
-            Intent intent = new Intent(getApplicationContext(), Overview.class);
+            Intent intent = new Intent(MainActivity.this, Quiz.class);
             intent.putExtra(TOPIC, topic);
             startActivity(intent);
         }
@@ -93,12 +93,9 @@ public class MainActivity extends AppCompatActivity {
 
         private String DESCRIPTION;
         private String TOPIC;
-        private String[] QUESTIONS = {"what is the airspeed velocity of an unlaiden swallow?"};
-        private String[][] RESPONSES = {
-            {"a", "b", "c", "d"}, // answer is 3/c
-            {"a", "b", "c", "d"}  // answer is 1/a
-        };
-        private int[] ANSWERS = {3,1};
+        private String[] QUESTIONS;
+        private String[][] RESPONSES;
+        private int[] ANSWERS;
         private int question;
         private int correct;
 
