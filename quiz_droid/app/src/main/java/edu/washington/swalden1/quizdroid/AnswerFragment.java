@@ -17,16 +17,16 @@ public class AnswerFragment extends Fragment {
 
     private static final String ARG_TOPIC = "topic";
 
-    private String topic;
+    private int topic;
 
     public AnswerFragment() {
         // Required empty public constructor
     }
 
-    public static AnswerFragment newInstance(String param1) {
+    public static AnswerFragment newInstance(int param1) {
         AnswerFragment fragment = new AnswerFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_TOPIC, param1);
+        args.putInt(ARG_TOPIC, param1);
         fragment.setArguments(args);
         return fragment;
     }
@@ -35,7 +35,7 @@ public class AnswerFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            this.topic = getArguments().getString(ARG_TOPIC);
+            this.topic = getArguments().getInt(ARG_TOPIC);
         }
     }
 
@@ -46,12 +46,13 @@ public class AnswerFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_answer, container, false);
 
         int response_number = Quiz.response;
-        MainActivity.Topic topic = MainActivity.TOPICS.get(this.topic);
+        Topic topic = QuizApp.getInstance().getTopics()[this.topic];
 
         final int question_number = topic.getQuestion();
-        String question = topic.getQuestions()[question_number];
-        String answer = topic.getResponses()[question_number][topic.getAnswers()[question_number]];
-        String response = topic.getResponses()[question_number][response_number];
+        Question q = topic.getQuestions().get(question_number);
+        String question = q.getQuestionText();
+        String answer = q.getAnswers()[q.getAnswer()];
+        String response = q.getAnswers()[response_number];
 
         TextView aa = (TextView) v.findViewById(R.id.answer_answer);
         TextView an = (TextView) v.findViewById(R.id.answer_number);
@@ -64,7 +65,7 @@ public class AnswerFragment extends Fragment {
         an.setText("Question "+(question_number+1));
         aq.setText(question);
         ar.setText("You answered: " + response);
-        if (response_number == topic.getAnswers()[question_number]) {
+        if (response_number == q.getAnswer()) {
             // CORRECT
             int rightColor = 0xFF33AA33;
             topic.nextQuestion(true);
@@ -79,7 +80,7 @@ public class AnswerFragment extends Fragment {
             ar.setTextColor(wrongColor);
             av.setTextColor(wrongColor); // 0xAA3333
         }
-        as.setText("You've answered "+topic.getCorrect()+" out of "+topic.getQuestions().length+" questions correct!");
+        as.setText("You've answered "+topic.getCorrect()+" out of "+topic.getQuestions().size()+" questions correct!");
         return v;
     }
 }

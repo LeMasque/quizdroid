@@ -10,30 +10,10 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.washington.swalden1.quizdroid.MainActivity">
 
-    <Button
-        android:text="Physics"
+    <ListView
+        android:id="@+id/main_listview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:id="@+id/button1" />
-
-    <Button
-        android:text="Math"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_centerVertical="true"
-        android:layout_below="@+id/button1"
-        android:layout_marginTop="25dp"
-        android:id="@+id/button2" />
-
-    <Button
-        android:text="Marvel Super Heros"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_below="@+id/button2"
-        android:layout_marginTop="25dp"
-        android:id="@+id/button3" />
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

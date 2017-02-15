@@ -17,16 +17,16 @@ public class OverviewFragment extends Fragment {
 
     private static final String ARG_TOPIC = "topic";
 
-    private String topic;
+    private int topic;
 
     public OverviewFragment() {
         // Required empty public constructor
     }
 
-    public static OverviewFragment newInstance(String param1) {
+    public static OverviewFragment newInstance(int param1) {
         OverviewFragment fragment = new OverviewFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_TOPIC, param1);
+        args.putInt(ARG_TOPIC, param1);
         fragment.setArguments(args);
         return fragment;
     }
@@ -35,7 +35,7 @@ public class OverviewFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            this.topic = getArguments().getString(ARG_TOPIC);
+            this.topic = getArguments().getInt(ARG_TOPIC);
         }
     }
 
@@ -50,8 +50,8 @@ public class OverviewFragment extends Fragment {
         TextView ot = (TextView) v.findViewById(R.id.overview_topic);
         TextView od = (TextView) v.findViewById(R.id.overview_description);
 
-        ot.setText(topic);
-        od.setText(MainActivity.TOPICS.get(topic).getDescription());
+        ot.setText(QuizApp.getInstance().getTopics()[topic].getTitle());
+        od.setText(QuizApp.getInstance().getTopics()[topic].getLongDescription());
 
         return v;
     }

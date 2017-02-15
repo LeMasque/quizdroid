@@ -21,16 +21,16 @@ public class QuestionFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_TOPIC = "topic";
 
-    private String topic;
+    private int topic;
 
     public QuestionFragment() {
         // Required empty public constructor
     }
 
-    public static QuestionFragment newInstance(String param1) {
+    public static QuestionFragment newInstance(int param1) {
         QuestionFragment fragment = new QuestionFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_TOPIC, param1);
+        args.putInt(ARG_TOPIC, param1);
         fragment.setArguments(args);
         return fragment;
     }
@@ -39,7 +39,7 @@ public class QuestionFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            this.topic = getArguments().getString(ARG_TOPIC);
+            this.topic = getArguments().getInt(ARG_TOPIC);
         }
     }
 
@@ -48,10 +48,11 @@ public class QuestionFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_question, container, false);
-        MainActivity.Topic topic = Quiz.topic;
+        Topic topic = Quiz.topic;
         int question_number = topic.getQuestion();
-        String question = topic.getQuestions()[question_number];
-        String[] responses = topic.getResponses()[question_number];
+        Question q = topic.getQuestions().get(question_number);
+        String question = q.getQuestionText();
+        String[] responses = q.getAnswers();
 
         TextView question_header = (TextView) v.findViewById(R.id.question_number);
         question_header.setText("Question "+(question_number+1));

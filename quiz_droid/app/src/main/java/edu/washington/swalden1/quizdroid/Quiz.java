@@ -8,12 +8,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class Quiz extends AppCompatActivity {
 
     private boolean isInQuestion = false;
-    public static MainActivity.Topic topic;
+    public static Topic topic;
     public static int response;
     public static Button button;
 
@@ -23,8 +22,8 @@ public class Quiz extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
 
         Intent intent = getIntent();
-        final String message = intent.getStringExtra(MainActivity.TOPIC);
-        topic = MainActivity.TOPICS.get(message);
+        final int message = intent.getIntExtra(MainActivity.TOPIC, 0);
+        topic = QuizApp.getInstance().getTopics()[message];
 
         button = (Button) findViewById(R.id.quiz_button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -34,8 +33,8 @@ public class Quiz extends AppCompatActivity {
                 Log.i(MainActivity.TAG, "question submit clicked");
                 if (isInQuestion && response >= 0) { // goto answer or last answer
                     isInQuestion = false;
-                    Log.d(MainActivity.TAG, topic.getQuestion() + " : " + topic.getQuestions().length);
-                    if (topic.getQuestion() + 1 == topic.getQuestions().length) {
+                    Log.d(MainActivity.TAG, topic.getQuestion() + " : " + topic.getQuestions().size());
+                    if (topic.getQuestion() + 1 == topic.getQuestions().size()) {
                         Log.i(MainActivity.TAG, "setting final text");
                         button.setText("Finish");
                     } else {
@@ -48,7 +47,7 @@ public class Quiz extends AppCompatActivity {
                     ft.commit();
                 } else { // goto question or finish
                     isInQuestion = true;
-                    if (topic.getQuestion() == topic.getQuestions().length) {
+                    if (topic.getQuestion() == topic.getQuestions().size()) {
                         Log.i(MainActivity.TAG, "Finish clicked!");
                         finish();
                     } else { // set the text for the question page and the change to answer fragment

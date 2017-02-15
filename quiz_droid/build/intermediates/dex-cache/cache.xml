@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.1.1_a0bc7c361c616976f617fdbb112067e3a5f6192d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.1.1_3114641319f7b590e307b5b7940c9f4d23429375.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/masq/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.1/support-annotations-25.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/pre-dexed/debug/support-annotations-25.1.1_1f26d7b9752eea7dd20744ad8d4ed533c7019d58.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.1.1_ade45830ec4fffc1b5973ed0bb325ecfbd3cf177.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.1.1_43bd5df06348685613181d0b5b935d6ce5208a2e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.1.1_b428ca0c9e797c5d93022328b50d907070b3fb86.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.1.1_926af2e391ca4db3059247ab238b55f61a7f94f0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.1.1_dd0977ca87615f9baa9a3cb8003adb8d9d814548.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8644375c8a87997a8300259c097bf757d9fc0bc9">
+        <dex dex="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_c06c2fa5ae850a2233f2f4199c5681f29597d3ce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5bf35dd976c8e2b79b03ce1f543bb1df8849dc90">
+        <dex dex="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/pre-dexed/debug/instant-run_e902371adec72f938a28cef1dd068941e6aa6497.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.1.1_bc047ed2b8bbc0606f51a2cc490f2baeb3142ab3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="/home/masq/AndroidStudioProjects/QuizDroid/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.1.1_1f9fb72b192773754b84efc1de44de3bb6d5e24d.jar" />
+    </item>
+
+</items>
